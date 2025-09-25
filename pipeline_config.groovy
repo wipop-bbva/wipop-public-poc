@@ -1,5 +1,6 @@
 jdk_tool = 'java-21'
 deploy_to_sonatype = 'true'
+is_github_repo = 'true'
 jte {
 	pipeline_template = "jar_library"
 }
