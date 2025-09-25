@@ -7,3 +7,28 @@ jte {
 libraries {
 	maven
 }
+
+application_environments{
+    dev{name
+        bucket = ''
+        source = ''
+        destination = ''
+        secret_name = 'op-jenkins-secrets'
+        key_bucket = ''
+        key_path = ''
+        sign_apk = 'false'
+    }
+  sandbox {
+        bucket = ''
+        source = ''
+        destination = ''
+        secret_name = 'op-jenkins-secrets'
+    }
+  prod{
+        bucket = ''
+        source = ''
+        destination = ''
+        secret_name = 'op-jenkins-secrets'
+    }
+
+}
