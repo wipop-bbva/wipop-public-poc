@@ -6,7 +6,7 @@
 
 	<groupId>es.wipop</groupId>
 	<artifactId>wipop-public-poc</artifactId>
-	<version>1.0.0-RELEASE</version>
+	<version>1.0.0</version>
 
 	<name>wipop-public-poc</name>
 	<description>Descripción de tu proyecto</description>
