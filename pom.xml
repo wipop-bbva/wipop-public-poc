@@ -6,9 +6,33 @@
 
 	<groupId>es.wipop</groupId>
 	<artifactId>wipop-public-poc</artifactId>
-	<version>1.1.0</version>
-
+	<version>1.3.0</version>
+	<description>Descripción de tu proyecto</description>
+	<url>https://github.com/wipop-bbva/wipop-public-poc</url>
 	<name>wipop-public-poc</name>
+
+	<licenses>
+    	<license>
+      		<name>The Apache License, Version 2.0</name>
+      		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      		<distribution>repo</distribution>
+    	</license>
+  	</licenses>
+
+	<scm>
+    	<url>https://github.com/wipop-bbva/wipop-public-poc</url>
+    	<connection>scm:git:git://github.com/wipop-bbva/wipop-public-poc.git</connection>
+    	<developerConnection>scm:git:ssh://github.com/wipop-bbva/wipop-public-poc.git</developerConnection>
+    	<tag>HEAD</tag>
+  	</scm>
+
+	<developers>
+    	<developer>
+      		<id>tu-mrivas</id>
+      		<name>Marco Antonio Rivas</name>
+      		<email>marcoantonio.rivas@openpay.mx</email>
+    	</developer>
+  	</developers>
 
 	<!--distributionManagement>
    		<snapshotRepository>
