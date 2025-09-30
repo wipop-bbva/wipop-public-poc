@@ -6,11 +6,11 @@
 
 	<groupId>es.wipop</groupId>
 	<artifactId>wipop-public-poc</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.1.0</version>
 
 	<name>wipop-public-poc</name>
 
-	<distributionManagement>
+	<!--distributionManagement>
    		<snapshotRepository>
       		<id>ossrh</id>
       		<url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
@@ -19,14 +19,14 @@
       		<id>ossrh</id>
       		<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     	</repository>
-  	</distributionManagement>
+  	</distributionManagement-->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>21</maven.compiler.release>
 	</properties>
 
-	<repositories>
+	<!--repositories>
 		<repository>
 			<id>central</id>
 			<url>https://repo.maven.apache.org/maven2/</url>
@@ -37,7 +37,7 @@
 			<id>central</id>
 			<url>https://repo.maven.apache.org/maven2/</url>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories-->
 
 	<dependencies>
 
@@ -45,6 +45,30 @@
 
 	<build>
   		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -57,7 +81,7 @@
     		<plugin>
       			<groupId>org.apache.maven.plugins</groupId>
       			<artifactId>maven-gpg-plugin</artifactId>
-      			<version>3.0.1</version>
+      			<version>3.2.2</version>
       			<executions>
         			<execution>
           				<id>sign-artifacts</id>
@@ -74,7 +98,7 @@
           	<version>0.9.0</version>
           	<extensions>true</extensions>
           		<configuration>
-             		<publishingServerId>central</publishingServerId>
+             		<publishingServerId>ossrh</publishingServerId>
              		<autoPublish>true</autoPublish>
           		</configuration>
         	</plugin>
