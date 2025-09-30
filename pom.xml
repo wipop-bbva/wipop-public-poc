@@ -101,6 +101,13 @@
              		<publishingServerId>ossrh</publishingServerId>
              		<autoPublish>true</autoPublish>
           		</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.sonatype.central</groupId>
+						<artifactId>central-publishing-client</artifactId>
+						<version>1.4.0</version>
+					</dependency>
+				</dependencies>
         	</plugin>
   		</plugins>
 	</build>
