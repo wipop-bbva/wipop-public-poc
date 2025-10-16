@@ -1,3 +1,4 @@
+git_credentials_id = '58bfa4ec-39d6-4a7d-8bf7-b8c0f2b18733'
 jdk_tool = 'java-21'
 deploy_to_sonatype = 'true'
 is_github_repo = 'true'
