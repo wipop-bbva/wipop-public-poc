@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>es.wipop</groupId>
+	<artifactId>wipop-public-poc</artifactId>
+	<version>1.7.0-RELEASE</version>
+	<description>Descripción de tu proyecto</description>
+	<url>https://github.com/wipop-bbva/wipop-public-poc</url>
+	<name>wipop-public-poc</name>
+
+	<licenses>
+    	<license>
+      		<name>The Apache License, Version 2.0</name>
+      		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      		<distribution>repo</distribution>
+    	</license>
+  	</licenses>
+
+	<scm>
+    	<url>https://github.com/wipop-bbva/wipop-public-poc</url>
+    	<connection>scm:git:git://github.com/wipop-bbva/wipop-public-poc.git</connection>
+    	<developerConnection>scm:git:ssh://github.com/wipop-bbva/wipop-public-poc.git</developerConnection>
+    	<tag>HEAD</tag>
+  	</scm>
+
+	<developers>
+    	<developer>
+      		<id>tu-mrivas</id>
+      		<name>Marco Antonio Rivas</name>
+      		<email>marcoantonio.rivas@openpay.mx</email>
+    	</developer>
+  	</developers>
+
+	<!--distributionManagement>
+   		<snapshotRepository>
+      		<id>ossrh</id>
+      		<url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+    	</snapshotRepository>
+    	<repository>
+      		<id>ossrh</id>
+      		<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    	</repository>
+  	</distributionManagement-->
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.release>21</maven.compiler.release>
+	</properties>
+
+	<!--repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</pluginRepository>
+	</pluginRepositories-->
+
+	<dependencies>
+
+	</dependencies>
+
+	<build>
+  		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<source>21</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
+    		<plugin>
+      			<groupId>org.apache.maven.plugins</groupId>
+      			<artifactId>maven-gpg-plugin</artifactId>
+      			<version>3.2.2</version>
+      			<executions>
+        			<execution>
+          				<id>sign-artifacts</id>
+          				<phase>deploy</phase>
+          				<goals>
+            				<goal>sign</goal>
+          				</goals>
+        			</execution>
+      			</executions>
+    		</plugin>
+			<plugin>
+          <groupId>org.sonatype.central</groupId>
+          	<artifactId>central-publishing-maven-plugin</artifactId>
+          	<version>0.9.0</version>
+          	<extensions>true</extensions>
+          		<configuration>
+             		<publishingServerId>ossrh</publishingServerId>
+             		<autoPublish>true</autoPublish>
+          		</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.sonatype.central</groupId>
+						<artifactId>central-publishing-client</artifactId>
+						<version>1.4.0</version>
+					</dependency>
+				</dependencies>
+        	</plugin>
+  		</plugins>
+	</build>
+
+</project>
