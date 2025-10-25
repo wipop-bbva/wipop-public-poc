@@ -6,7 +6,7 @@
 
 	<groupId>es.wipop</groupId>
 	<artifactId>wipop-public-poc</artifactId>
-	<version>1.8.0-RELEASE</version>
+	<version>1.8.1-RELEASE</version>
 	<description>Descripción de tu proyecto</description>
 	<url>https://github.com/wipop-bbva/wipop-public-poc</url>
 	<name>wipop-public-poc</name>
