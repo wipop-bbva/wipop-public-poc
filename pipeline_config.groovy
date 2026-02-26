@@ -4,7 +4,7 @@ is_github_repo = 'true'
 maven_install = 'openpay-maven-3.9.6'
 sonatype_credentials_id = 'ossrh'
 secret_name = 'op-mx-dev-jenkins'
-
+git_credentials_id = 'jenkins-github-latam-ct'
 jte {
 	pipeline_template = "jar_library"
 }
